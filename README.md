@@ -1,6 +1,6 @@
 ROSque project
 ==============
 
-# SLAM
+## SLAM
 ## Navigation
-### Active Tracking
+## Active Tracking

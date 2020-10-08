@@ -8,8 +8,6 @@ ROSque project
 ## Active Tracking
     bebop 2 drone이 또 다른 bebop 2 drone를 일정간격을 유지 추적
 
-
-
+#
+#
 프로젝트 기간 : 2020.9.9 ~ 2020.10.13
-  
-

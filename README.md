@@ -2,6 +2,7 @@ ROSque project
 ==============
 
 ## SLAM
+라즈베리파이에 realsense d435_camera과 bebop 2 drone을 이용한 mapping
 ## Navigation
 ## Active Tracking
          

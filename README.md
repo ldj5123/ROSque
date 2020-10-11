@@ -18,7 +18,7 @@ Navigation
 ## 5. 진행과정
 #### 5-1. ROS package
 * bebop_autonomy
-  - bebop 2 drone 을 사용하기 위한 패키지
+  - bebop 2 drone 사용을 위한 패키지
 * move_it
   - drone에 맞게 urdf작성.
   - moveit_setup_assistant 패키지를 사용해 moveit을 위한 모든 설정이 담긴 패키지 생성(test2)

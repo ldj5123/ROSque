@@ -47,7 +47,7 @@ Navigation
 영상, 이미지
 
 ## 7. 문제점 및 보완사항
-* SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud를 Subscribe 및 path planning 시 시간이 오래 걸림
+* SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가
 * rviz상에서 실제 드론의 위치추정 불가
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움

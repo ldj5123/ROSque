@@ -20,6 +20,7 @@ SLAM
 -드론사진-
 
 #### 5-2. ROS package
+* bebop_autonomy
 * realsense2_camera(d435)
   - pi 4에 realsense2_camera 패키지를 사용하려면 SDK를 설치해야하는데 intel에서 pi 4 32bit환경에 대한 SDK설치 지원을 안해주어 어려움이 있었으나
 멘토의 도움으로 pi4 32비트에서 SDK를 설치
@@ -34,6 +35,8 @@ SLAM
   </code>
   </pre>
   - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려줌
+* bebop_teleop
+  - bebop 2 drone을 조종하는 노드
 
 
 #### 5-3. topic

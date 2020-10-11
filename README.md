@@ -30,10 +30,10 @@ SLAM
   <pre>
   <code>
   <!-- RGB-D related topics -->
-  arg name="rgb_topic"               default="/camera/color/image_raw" />
-  arg name="depth_topic"             default="/camera/aligned_depth_to_color/image_raw" />
-  arg name="camera_info_topic"       default="/camera/color/camera_info" />
-  arg name="depth_camera_info_topic" default="$(arg camera_info_topic)" />
+  <arg name="rgb_topic"               default="/camera/color/image_raw" />
+  <arg name="depth_topic"             default="/camera/aligned_depth_to_color/image_raw" />
+  <arg name="camera_info_topic"       default="/camera/color/camera_info" />
+  <arg name="depth_camera_info_topic" default="$(arg camera_info_topic)" />
   </code>
   </pre>
   - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려줌

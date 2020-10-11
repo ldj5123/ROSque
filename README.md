@@ -3,7 +3,7 @@ Navigation
 ## 1. 목적
 * 
 ## 2. 주요 기능
-* ROS를 이용해 전에 작성한 맵을 기반으로 드론의 자율비행
+* SLAM으로 작성한 맵을 기반으로 드론의 자율비행
 
 ## 3. 주요 하드웨어
 * parrot bebop 2 drone
@@ -15,8 +15,15 @@ Navigation
 ## 5. 진행과정
 #### 5-1. ROS package
 * bebop_autonomy
-* Move_it
+  - bebop 2 drone 을 사용하기위한 패키지
+* move_it
+  - move_it을 이용해 드론의 이동동선을 그려줌
 * point_cloud_io
+  - SLAM으로 작성한 ply파일을 point cloud로 만들어 지정한 topic명으로 발행
+* bebop_teleop
+  - 드론의 직접조종이 필요할 때 사용
+* rosque_navi
+  - move_it에서 만든 이동동선을 토대로 이동
 
 
 #### 5-3. topic

@@ -23,9 +23,17 @@ Navigation
 * bebop_teleop
   - 드론의 직접조종이 필요할 때 사용
 * rosque_navi
-  - move_it에서 만든 이동동선을 토대로 이동
+  - move_it에서 만든 이동동선을 토대로 이동하는것을 구현
 
-
+#### 5-2. 소스코드
+* bebop_teleop
+  - 전체 코드
+    link
+  - 코드 설명
+* rosque_navi
+  -전체 코드
+    + rosque_navi.cpp
+    + path.h
 #### 5-3. topic
 <img src="/image/slam_topic.png" width="100%" height="100%"></img>
 

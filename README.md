@@ -21,3 +21,4 @@ SLAM
 
 ## 5. 진행과정
 #### 5-1. topic
+![Alt text](/image/slam_topic.png)

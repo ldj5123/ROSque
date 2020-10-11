@@ -21,4 +21,4 @@ SLAM
 
 ## 5. 진행과정
 #### 5-1. topic
-<img src="/image/slam_topic.png" width="60%" height="60%"></img>
+<img src="/image/slam_topic.png" width="80%" height="80%"></img>

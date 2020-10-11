@@ -3,16 +3,12 @@ SLAM
 ## 1. 목적
 * 
 ## 2. 주요 기능
-* 임의의 실내공간을 localization하며 mapping 함
-## 3. using skill
-### ROS(package)
-* realsense2_camera(d435)
-* rtabmap_ros
+* ROS를 이용해 임의의 실내공간을 localization하며 mapping 함
 
 ## 4. 주요 하드웨어
 * Intel® RealSense™ Depth Camera D435
 * parrot bebop 2 drone
-* raspberry pi
+* raspberry pi 4
 
 
 #
@@ -20,5 +16,17 @@ SLAM
 * 2020.9.9 ~ 2020.9.18
 
 ## 5. 진행과정
-#### 5-1. topic
+#### 5-1. 하드웨어 구성
+* raspberry pi 4 에 d435 카메라를 연결한 후 pi를 bebop 2 drone에 부착
+-드론사진-
+
+#### 5-2. ROS package
+* realsense2_camera(d435)
+  - pi에 realsense2_camera 패키지를 사용하려면 SDK를 설치해야하는데 intel에서 pi 4 32bit환경에 대한 SDK설치 지원을 안해주어 어려움이 있었으나
+멘토의 도움으로 pi4 32비트에서 SDK를 설치
+* rtabmap_ros
+
+
+#### 5-. topic
 <img src="/image/slam_topic.png" width="100%" height="100%"></img>
+

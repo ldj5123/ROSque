@@ -33,7 +33,7 @@ SLAM
   arg name="depth_camera_info_topic" default="$(arg camera_info_topic)"
   </code>
   </pre>
-  - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려주어 
+  - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려주어 진행
 * bebop_teleop
   - bebop 2 drone을 조종하는 노드를 직접 구현
 

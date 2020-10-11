@@ -17,7 +17,8 @@ Navigation
 * bebop_autonomy
   - bebop 2 drone 을 사용하기위한 패키지
 * move_it
-  - move_it을 이용해 드론의 이동동선을 그려줌
+  - bebop에 맞게 urdf작성 후 moveit_setup_assistant를 사용해 moveit을 위한 모든 설정이 담긴 패키지 생성(여기서는 test2)
+* test2
 * point_cloud_io
   - SLAM으로 작성한 ply파일을 point cloud로 만들어 지정한 topic명으로 발행
 * bebop_teleop

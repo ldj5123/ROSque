@@ -9,7 +9,6 @@ SLAM
 * Intel® RealSense™ Depth Camera D435
 * parrot bebop 2 drone
 * raspberry pi 4
-* 노트북
 
 ## 4. 프로젝트 기간
 * 2020.9.9 ~ 2020.9.18

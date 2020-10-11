@@ -34,8 +34,8 @@ Navigation
   - 코드 설명
 * rosque_navi
   -전체 코드
-    + rosque_navi.cpp
-    + path.h
+    + rosque_navi.cpp link
+    + path.h link
 #### 5-3. topic
 <img src="/image/slam_topic.png" width="100%" height="100%"></img>
 

@@ -1,6 +1,6 @@
 SLAM
 ==============
-## using skill
+## 1.using skill
 ### ROS(package)
 #### realsense2_camera(d435)
 #### rtabmap_ros

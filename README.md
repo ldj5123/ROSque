@@ -21,7 +21,7 @@ SLAM
 
 #### 5-2. ROS package
 * realsense2_camera(d435)
-  - pi에 realsense2_camera 패키지를 사용하려면 SDK를 설치해야하는데 intel에서 pi 4 32bit환경에 대한 SDK설치 지원을 안해주어 어려움이 있었으나
+  - pi 4에 realsense2_camera 패키지를 사용하려면 SDK를 설치해야하는데 intel에서 pi 4 32bit환경에 대한 SDK설치 지원을 안해주어 어려움이 있었으나
 멘토의 도움으로 pi4 32비트에서 SDK를 설치
 * rtabmap_ros
   - 사용하려는 카메라에 맞게 rtabmap.launch의 인자 기본값을 수정해줌
@@ -36,6 +36,10 @@ SLAM
   - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려줌
 
 
-#### 5-. topic
+#### 5-3. topic
 <img src="/image/slam_topic.png" width="100%" height="100%"></img>
 
+## 6. 결과물
+영상, 이미지
+
+## 7. 개선할점

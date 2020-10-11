@@ -19,6 +19,7 @@ Navigation
 * move_it
   - bebop에 맞게 urdf작성 후 moveit_setup_assistant를 사용해 moveit을 위한 모든 설정이 담긴 패키지 생성(여기서는 test2)
 * test2
+  - point_cloud_io로 발행한 토픽을 받아 맵을 만들고 도착지점을 지정해 이동동선을 만들어준다
 * point_cloud_io
   - SLAM으로 작성한 ply파일을 point cloud로 만들어 지정한 topic명으로 발행
 * bebop_teleop

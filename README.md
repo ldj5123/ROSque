@@ -25,7 +25,7 @@ SLAM
   - pi 4에 realsense2_camera 패키지를 사용하려면 SDK를 설치해야하는데 intel에서 pi 4 32bit환경에 대한 SDK설치 지원을 안해주어 어려움이 있었으나
 멘토의 도움으로 pi4 32비트에서 SDK를 설치
 * rtabmap_ros
-  - 사용하려는 카메라에 맞게 rtabmap.launch의 인자 기본값을 수정해줌
+  - 사용하려는 카메라에 맞게 rtabmap.launch의 인자 기본값을 수정
   <pre>
   <code>
   arg name="rgb_topic"               default="/camera/color/image_raw"
@@ -34,7 +34,7 @@ SLAM
   arg name="depth_camera_info_topic" default="$(arg camera_info_topic)"
   </code>
   </pre>
-  - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려줌
+  - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려주어 
 * bebop_teleop
   - bebop 2 drone을 조종하는 노드
 

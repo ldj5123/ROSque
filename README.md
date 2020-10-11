@@ -27,8 +27,8 @@ SLAM
   - ROS에서 bebop을 사용하기 위한 패키지
 * realsense2_camera(D435)
   - pi 4에 realsense2_camera 패키지를 사용하려면 SDK를 설치 필요.
-  - Intel 제조사는 pi4 32bit 환경 SDK 설치에 대한 지원이 없음.
-  - ()을 통해 pi4 32비트에서 SDK 설치.
+  - Intel 제조사는 pi 4 32bit 환경 SDK 설치에 대한 지원이 없음.
+  - ()을 통해 pi 4 32비트에서 SDK 설치.
 * rtabmap_ros
   - D435에 맞게 rtabmap.launch의 인자 기본값 수정.
   <pre>

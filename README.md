@@ -27,11 +27,11 @@ SLAM
 멘토의 도움으로 pi4 32비트에서 SDK를 설치
 * rtabmap_ros
   - 사용하려는 카메라에 맞게 rtabmap.launch의 인자 기본값을 수정해줌
-  <pre><code>  <!-- RGB-D related topics -->
-  <arg name="rgb_topic"               default="/camera/color/image_raw" />
-  <arg name="depth_topic"             default="/camera/aligned_depth_to_color/image_raw" />
-  <arg name="camera_info_topic"       default="/camera/color/camera_info" />
-  <arg name="depth_camera_info_topic" default="$(arg camera_info_topic)" /></code></pre>
+  <pre><code>  <!-- RGB-D related topics --></code></pre>
+  <pre><code> <arg name="rgb_topic"               default="/camera/color/image_raw" /></code></pre>
+  <pre><code> <arg name="depth_topic"             default="/camera/aligned_depth_to_color/image_raw" /></code></pre>
+  <pre><code> <arg name="camera_info_topic"       default="/camera/color/camera_info" /></code></pre>
+  <pre><code> <arg name="depth_camera_info_topic" default="$(arg camera_info_topic)" /></code></pre>
   - pi의 사양이 낮아 이미지 전송속도가 느려 queue_size를 90으로 늘려줌
 
 

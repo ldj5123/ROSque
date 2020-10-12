@@ -20,7 +20,7 @@ Navigation
 
 ## 5. 결과물
 * urdf를 작성하여 드론 모델링
-'''
+```
   <link name="landing_gear">
     <visual>
       <geometry>
@@ -42,7 +42,7 @@ Navigation
       <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0"/>
     </inertial>
   </link>
-'''
+```
 ![drone_model](https://user-images.githubusercontent.com/67685757/95724330-37369200-0cb1-11eb-8330-6d9267580ed1.png)
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면

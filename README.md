@@ -31,12 +31,12 @@ Navigation
 * rosque_navi
   - move_it에서 만든 이동 동선을 토대로 Navigation 구현
 
-#### 5-2. 소스코드
+/*#### 5-2. 소스코드
 * bebop_teleop
   - [bebop_teleop.cpp](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_teleop/src/bebop_teleop.cpp "bebop_teleop")
 * rosque_navi
   - [rosque_navi.cpp](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/rosque_navi.cpp "rosque_navi.cpp")
-  - [path.h](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h")
+  - [path.h](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h")*/
 #### 5-3. topic
 <img src="/image/rosque_navi.png" width="100%" height="100%"></img>
 

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/lee/bebop.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/bebop_drone.srdf
+  CONFIG:
+    author_name: lee
+    author_email: lee@naver.com
+    generated_timestamp: 1601349658

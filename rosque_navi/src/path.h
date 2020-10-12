@@ -20,7 +20,7 @@ using std::vector;
 class BebopControl
 {
 public:
-    BebopControl(int pathPoint);
+    BebopControl();
 
 private:
     void target_to_bebop(float x_n, float y_n, float z_n, float yaw_n, float x, float y, float z, float yaw);
@@ -39,16 +39,19 @@ private:
     void path_callback(const moveit_msgs::DisplayTrajectory msg);
 };
 
-BebopControl::BebopControl(int pathPoint)
+BebopControl::BebopControl()
 {
     path_count = 0;
-    path_point = pathPoint;
+    path_point = 0;
     path_sub = n.subscribe("move_group/display_planned_path", 1, &BebopControl::path_callback, this);			/// path following
     bebop_cmd = n.advertise<geometry_msgs::Twist>("bebop/cmd_vel",1, true);
 
 }
 
 void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
+    std::cout << "insert path point count : ";
+    std::cin >> path_point;
+    ROS_INFO("START");
 
     int i = 0;
     int i_next = 0;
@@ -94,9 +97,7 @@ void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
     path_w.clear();
     path_count = 0;
     path_point = 0;
-    std::cout << "insert path point count : ";
-    std::cin >> path_point;
-    ROS_INFO("START");
+    
 }
 
 void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n, float x, float y, float z, float yaw)

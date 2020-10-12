@@ -20,7 +20,29 @@ Navigation
 
 ## 5. 결과물
 * urdf를 작성하여 드론 모델링
-![urdf](https://user-images.githubusercontent.com/67685757/95724048-d73feb80-0cb0-11eb-89fd-633b539ea199.png)
+'''
+  <link name="landing_gear">
+    <visual>
+      <geometry>
+        <cylinder length="0.18" radius="0.03"/>
+      </geometry>
+      <origin rpy="0 -1.5708 0" xyz="0 0 0"/>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.18" radius="0.03"/>
+      </geometry>
+      <origin rpy="0 -1.5708 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0"/>
+    </inertial>
+  </link>
+'''
 ![drone_model](https://user-images.githubusercontent.com/67685757/95724330-37369200-0cb1-11eb-8330-6d9267580ed1.png)
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면

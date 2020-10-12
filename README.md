@@ -28,7 +28,14 @@ SLAM
     * MCU를 raspberry pi 4로 변경 진행 -> 10fps 확보
     * pi 4 사용시 영상수신 가능하지만 point cloud2를 subscribe하는데 network 성능이 낮아 jetson이나 odroid 보드를 사용하면 개선될 것으로 보임
 
+    ![ROSque_battery](https://user-images.githubusercontent.com/69998058/95724941-f428ee80-0cb1-11eb-89dd-2e6742f4b627.png)
+    
+    ![ROSque_battery1](https://user-images.githubusercontent.com/69998058/95725274-6a2d5580-0cb2-11eb-9670-af093322f7e0.png)
+
+
 3. pi 4의 외부전원으로 Lipo 배터리를 사용했는데 중량이 커져 드론의 비행시간이 줄어들고 pi 4를 드론의 위에 부착하다보니 무게중심이 높아져 비행안정성이 떨어짐
     * 드론의 배터리에서 전원공급을 받는다면 비행시간과 비행안정성을 개선할 수 있음
+
+    ![ROSque_bebop2](https://user-images.githubusercontent.com/69998058/95726003-520a0600-0cb3-11eb-9a0a-57d07f813080.png)
 
 4. RGB-D 카메라는 고사양을 요구해 MCU의 사양에 따라 mapping 속도가 달라질 수 있을 것으로 보임

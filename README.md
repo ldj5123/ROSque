@@ -34,7 +34,7 @@
   - 코드 설명
     
 #### 5-3. topic
-이미지, flow chart
+<img src="/image/active_tracking.png" width="100%" height="100%"></img>
 
 ## 6. 결과물
 영상, 이미지

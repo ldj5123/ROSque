@@ -50,8 +50,6 @@ BebopControl::BebopControl(int pathPoint)
 
 void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
 
-    //---Copy the path data to pointers----
-
     int i = 0;
     int i_next = 0;
     int point_size = msg.trajectory[0].multi_dof_joint_trajectory.points.size();
@@ -74,7 +72,7 @@ void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
     i = 0;
     i_next = 1;
 
-    sleep(0.5); // Give some time to make ARDrone stable
+    sleep(0.5);
 
     ROS_INFO("Start to follow the path!!");
     while( i_next < path_x.size() )

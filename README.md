@@ -16,27 +16,13 @@
 ## 4. 프로젝트 기간
 * 2020.9.25 ~ 2020.10.15
 
-## 5. 진행과정
-#### 5-1. ROS package
-* bebop_autonomy
-  - bebop 2 drone 사용을 위한 패키지
-* dnn_detect
-  - OpenCV를 이용한 학습된 피사체 인식
-* active_tarcking 
-  - dnn_detect로 인식한 피사체 중 target_object 추적
-* bebop_teleop
-  - 드론 직접 조종이 필요할 때 사용
-    
-#### 5-2. topic
-<img src="/image/active_tracking.png" width="100%" height="100%"></img>
-
-## 6. 결과물
-영상, 이미지
-
-## 7. 문제점 및 보완사항
+## 5. 개발시 발생한 장애요인 및 해결사항
 * 저화질의 단안 카메라는 dnn_detect로 먼거리의 피사체 인식불가 
 * 인식된 target_object의 라벨링이 중복될 경우, 우선순위 설정 불가능
 * 먼거리에 있는 장애물임에도 불구하고, 지정한 대각 거리 이상의 물체일 때는 회피 기동함
 * 피사체의 크기에 따른 boundary box 대각거리의 차이로 일정한 거리 유지 불가능
+
+## 6. 결과물
+영상, 이미지
 
 

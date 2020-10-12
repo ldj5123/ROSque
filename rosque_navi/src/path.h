@@ -119,8 +119,6 @@ void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n,
         cmdT.linear.y = y_/8;
         cmdT.linear.z = 0;
 
-        //ROS_INFO("linear x : %f\t linear y : %f\t linear z : %f", cmdT.linear.x, cmdT.linear.y, cmdT.linear.z);
-        // assume that while actively controlling, the above for will never be equal to zero, so i will never hover.
         cmdT.angular.x = cmdT.angular.y = cmdT.angular.z = 0;
         bebop_cmd.publish(cmdT);
     }
@@ -128,20 +126,6 @@ void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n,
 
     std::chrono::system_clock::time_point start1 = std::chrono::system_clock::now();
     std::chrono::milliseconds mill1 = std::chrono::duration_cast<std::chrono::milliseconds>(start1 - start1);
-    /*while(mill1.count() < 100){
-        std::chrono::system_clock::time_point End1 = std::chrono::system_clock::now();
-        mill1 = std::chrono::duration_cast<std::chrono::milliseconds>(End1 - start1);
-        geometry_msgs::Twist cmdT;
-
-        cmdT.linear.x = 0;
-        cmdT.linear.y = 0;
-        cmdT.linear.z = 0;
-
-
-        // assume that while actively controlling, the above for will never be equal to zero, so i will never hover.
-        cmdT.angular.x = cmdT.angular.y = cmdT.angular.z = 0;
-        bebop_cmd.publish(cmdT);
-    }*/
 }
 
 

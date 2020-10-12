@@ -25,7 +25,7 @@
 * active_tarcking 
   - dnn_detect로 인식한 피사체 중 target_object 추적
 * bebop_teleop
-  - 드론 직접조종이 필요할 때 사용
+  - 드론 직접 조종이 필요할 때 사용
     
 #### 5-2. topic
 <img src="/image/active_tracking.png" width="100%" height="100%"></img>

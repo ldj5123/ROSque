@@ -42,6 +42,7 @@ Navigation
       <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0"/>
     </inertial>
   </link>
+  ...
 ```
 ![drone_model](https://user-images.githubusercontent.com/67685757/95724330-37369200-0cb1-11eb-8330-6d9267580ed1.png)
 

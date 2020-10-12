@@ -2,6 +2,7 @@ SLAM
 ==============
 ## 1. 목적
 * SLAM을 이용하여 드론으로 주변 환경에 대한 모델을 3D맵으로 생성, 사람이 접근하기 힘든 실내 공간을 인식할 수 있게 함
+
 ## 2. 주요 기능
 * 임의의 실내공간을 localization하며 mapping 함
 
@@ -14,41 +15,17 @@ SLAM
   - Intel® RealSense™ Depth Camera D435
   - raspberry pi 4
 
-## 4. 프로젝트 기간
-* 2020.9.9 ~ 2020.9.18
-
-## 5. 진행과정
-#### 5-1. 하드웨어 구성
-* raspberry pi 4에 D435 카메라를 연결 후, bebop 2 drone에 부착
--드론사진-
-
-#### 5-2. ROS package
-* bebop_autonomy
-  - ROS에서 bebop을 사용하기 위한 패키지
-* realsense2_camera(D435)
-  - pi 4에 realsense2_camera 패키지를 사용하려면 SDK를 설치 필요
-  - Intel 제조사는 pi 4 32bit 환경 SDK 설치에 대한 지원이 없음
-  - ()을 통해 pi 4 32비트에서 SDK 설치.
-* rtabmap_ros
-  - D435에 맞게 rtabmap.launch의 인자 기본값 수정
-  <pre>
-  <code>
-  arg name="rgb_topic"               default="/camera/color/image_raw"
-  arg name="depth_topic"             default="/camera/aligned_depth_to_color/image_raw"
-  arg name="camera_info_topic"       default="/camera/color/camera_info"
-  arg name="depth_camera_info_topic" default="$(arg camera_info_topic)"
-  arg name="queue_size"              default="90"
-  </code>
-  </pre>
-* bebop_teleop
-  - bebop 2 drone을 조종하는 노드 구현
-
-
-#### 5-3. topic
-<img src="/image/slam_topic.png" width="100%" height="100%"></img>
-
-## 6. 결과물
+## 4. 결과물
 영상, 이미지
 
-## 7. 문제점 및 보완사항
-* RGB-D 카메라는 고사양을 요구해 MCU의 사양에 따라 mapping 속도가 달라질 수 있음
+## 5. 문제점 및 보완사항
+* Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 depth camera를 활용
+* depth camera를 활용할 MCU로 Raspberry pi 3를 선택
+* D435를 사용하려면 USB 3.0이 필요하지만 Raspberry pi 3는 USB 2.0만 지원
+* pi 3로 진행하니 성능이 떨어져 영상전송 지연율 증가 (약 30,000ms)
+* MCU를 Lattepanda로 변경 진행 -> 성능은 좋지만 발열과 전원공급에 문제가 생김
+* MCU를 raspberry pi 4로 변경 진행 -> 10fps 확보
+* pi 4 사용시 영상수신 가능하지만 point cloud2를 subscribe하는데 network 성능이 낮아 jetsondl나 odroid 보드를 사용하면 개선될것으로 보임
+* pi 4의 외부전원으로 Lipo 배터리를 사용했는데 중량이 커져 드론의 비행시간이 줄어들고 pi 4를 드론의 위에 부착하다보니 무게중심이 높아져 비행안정성이 떨어짐
+* 드론의 배터리에서 전원공급을 받는다면 비행시간과 비행안정성을 개선할 수 있음
+* RGB-D 카메라는 고사양을 요구해 MCU의 사양에 따라 mapping 속도가 달라질 수 있을것으로 보임

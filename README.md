@@ -12,11 +12,20 @@ Navigation
 * 하드웨어
   - parrot bebop 2 drone
 
-## 4. 결과물
-영상, 이미지
-
-## 5. 개발시 발생한 장애요인 및 해결사항
+## 4. 개발시 발생한 장애요인 및 해결사항
 * SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가
 * rviz상에서 실제 드론의 위치추정 불가
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
+
+## 5. 결과물
+* urdf를 작성하여 드론 모델링
+![urdf](https://user-images.githubusercontent.com/67685757/95724048-d73feb80-0cb0-11eb-89fd-633b539ea199.png)
+![drone_model](https://user-images.githubusercontent.com/67685757/95724330-37369200-0cb1-11eb-8330-6d9267580ed1.png)
+
+* moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면
+![moveit](https://user-images.githubusercontent.com/67685757/95725480-acef2d80-0cb2-11eb-9f44-b608c25d3187.png)
+
+* point_cloud_io로 SLAM한 맵의 point cloud를 발행한 화면
+![moveit_map](https://user-images.githubusercontent.com/67685757/95727014-977b0300-0cb4-11eb-9f18-721df8b9a441.png)
+

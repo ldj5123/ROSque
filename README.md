@@ -26,7 +26,7 @@ SLAM
     * pi 3로 진행하니 성능이 떨어져 영상전송 지연율 증가 (약 30,000ms)
     * MCU를 Lattepanda로 변경 진행 -> 성능은 좋지만 발열과 전원공급에 문제가 생김
     * MCU를 raspberry pi 4로 변경 진행 -> 10fps 확보
-    * pi 4 사용시 영상수신 가능하지만 point cloud2를 subscribe하는데 network 성능이 낮아 jetsondl나 odroid 보드를 사용하면 개선될 것으로 보임
+    * pi 4 사용시 영상수신 가능하지만 point cloud2를 subscribe하는데 network 성능이 낮아 jetson이나 odroid 보드를 사용하면 개선될 것으로 보임
 
 3. pi 4의 외부전원으로 Lipo 배터리를 사용했는데 중량이 커져 드론의 비행시간이 줄어들고 pi 4를 드론의 위에 부착하다보니 무게중심이 높아져 비행안정성이 떨어짐
     * 드론의 배터리에서 전원공급을 받는다면 비행시간과 비행안정성을 개선할 수 있음

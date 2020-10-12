@@ -20,7 +20,7 @@ using std::vector;
 class BebopControl
 {
 public:
-    BebopControl();
+    BebopControl(int pathPoint);
 
 private:
     void target_to_bebop(float x_n, float y_n, float z_n, float yaw_n, float x, float y, float z, float yaw);
@@ -39,19 +39,18 @@ private:
     void path_callback(const moveit_msgs::DisplayTrajectory msg);
 };
 
-BebopControl::BebopControl()
+BebopControl::BebopControl(int pathPoint)
 {
     path_count = 0;
-    path_point = 0;
+    path_point = pathPoint;
     path_sub = n.subscribe("move_group/display_planned_path", 1, &BebopControl::path_callback, this);			/// path following
     bebop_cmd = n.advertise<geometry_msgs::Twist>("bebop/cmd_vel",1, true);
 
 }
 
 void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
-    std::cout << "insert path point count : ";
-    std::cin >> path_point;
-    ROS_INFO("START");
+
+    //---Copy the path data to pointers----
 
     int i = 0;
     int i_next = 0;
@@ -75,7 +74,7 @@ void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
     i = 0;
     i_next = 1;
 
-    sleep(0.5);
+    sleep(0.5); // Give some time to make ARDrone stable
 
     ROS_INFO("Start to follow the path!!");
     while( i_next < path_x.size() )
@@ -97,7 +96,9 @@ void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
     path_w.clear();
     path_count = 0;
     path_point = 0;
-    
+    std::cout << "insert path point count : ";
+    std::cin >> path_point;
+    ROS_INFO("START");
 }
 
 void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n, float x, float y, float z, float yaw)
@@ -118,6 +119,8 @@ void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n,
         cmdT.linear.y = y_/8;
         cmdT.linear.z = 0;
 
+        //ROS_INFO("linear x : %f\t linear y : %f\t linear z : %f", cmdT.linear.x, cmdT.linear.y, cmdT.linear.z);
+        // assume that while actively controlling, the above for will never be equal to zero, so i will never hover.
         cmdT.angular.x = cmdT.angular.y = cmdT.angular.z = 0;
         bebop_cmd.publish(cmdT);
     }
@@ -125,6 +128,20 @@ void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n,
 
     std::chrono::system_clock::time_point start1 = std::chrono::system_clock::now();
     std::chrono::milliseconds mill1 = std::chrono::duration_cast<std::chrono::milliseconds>(start1 - start1);
+    /*while(mill1.count() < 100){
+        std::chrono::system_clock::time_point End1 = std::chrono::system_clock::now();
+        mill1 = std::chrono::duration_cast<std::chrono::milliseconds>(End1 - start1);
+        geometry_msgs::Twist cmdT;
+
+        cmdT.linear.x = 0;
+        cmdT.linear.y = 0;
+        cmdT.linear.z = 0;
+
+
+        // assume that while actively controlling, the above for will never be equal to zero, so i will never hover.
+        cmdT.angular.x = cmdT.angular.y = cmdT.angular.z = 0;
+        bebop_cmd.publish(cmdT);
+    }*/
 }
 
 

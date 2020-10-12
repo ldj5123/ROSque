@@ -54,12 +54,13 @@ void BebopControl::path_callback(const moveit_msgs::DisplayTrajectory msg) {
     int i = 0;          // 현재 포인트
     int i_next = 0;     // 다음 포인트
     int point_size = msg.trajectory[0].multi_dof_joint_trajectory.points.size();    // 이동 동선의 좌표 수
-    float qz = 0.0;
-    float qw = 0.0;
+    float qz = 0.0;     // rotation.z를 담기 위한 변수
+    float qw = 0.0;     // rotation.w를 담기 위한 변수
     float distance = 0.0;
     ++path_count;       // path_count를 
 
     for (i = 0; i < point_size; i++) {
+        // 만들어진 point_size 만큼 각각 x, y, z, w에 요소 추가
         path_x.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.x);
         path_y.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.y);
         path_z.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.z);

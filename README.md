@@ -44,7 +44,7 @@ Navigation
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면
 
-<img src="/image/rviz.gif" width="48%" height="48%"></img>
+<img src="/image/rivz.gif" width="48%" height="48%"></img>
 
 * octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
 * bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정

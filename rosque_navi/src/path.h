@@ -122,10 +122,6 @@ void BebopControl::target_to_bebop(float x_n, float y_n, float z_n, float yaw_n,
         bebop_cmd.publish(cmdT);
     }
     ROS_INFO("linear x : %f\t linear y : %f\t linear z : %f", cmdT.linear.x, cmdT.linear.y, cmdT.linear.z);
-
-    std::chrono::system_clock::time_point start1 = std::chrono::system_clock::now();
-    std::chrono::milliseconds mill1 = std::chrono::duration_cast<std::chrono::milliseconds>(start1 - start1);
-    
 }
 
 

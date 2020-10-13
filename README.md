@@ -44,10 +44,10 @@ Navigation
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면
 
-<img src="/image/moveit.png" width="48%" height="48%"></img>
+<img src="/image/rviz.gif" width="48%" height="48%"></img>
 
 * octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
-* bebop_path_planning 패키지의 config에 sensor관련 yaml파일의 point cloud topic을 수정
+* bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정
 ```
 sensors:
     - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
@@ -74,7 +74,7 @@ sensors:
             z: -7.72150347209e-06
             w: 0.99999999997
 ```
-* vector를 이용해 각 좌표를 담음
+* vector를 이용해 각 좌표를 변수에 담음
 ```
     for (i = 0; i < point_size; i++) {
         path_x.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.x);
@@ -85,7 +85,7 @@ sensors:
         path_w.push_back(Quaternion2Yaw(qz, qw));
     }
 ```
-* 현재와 다음좌표를 이용해 bebop을 이동
+* 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
 ## 5. 장애요인 및 해결사항
 * SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가

@@ -45,7 +45,9 @@ Navigation
 <img src="/image/drone_model.png" width="48%" height="48%"></img>
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면
+
 <img src="/image/moveit.png" width="48%" height="48%"></img>
+
 * octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
 * bebop_path_planning 패키지의 config에 sensor관련 yaml파일의 point cloud topic을 수정
 ```

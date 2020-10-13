@@ -1,7 +1,7 @@
 Navigation
 ==============
 ## 1. 목적
-* 드론이 SLAM으로 작성한 맵을 기반의 장애물을 회피하며 자율비행
+* 드론이 SLAM으로 작성 기반의 장애물을 회피하며 자율비행
 ## 2. 주요 기능
 * 3D맵을 구성하여 drone이 navigation을 수행
 
@@ -19,6 +19,17 @@ Navigation
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
 
 ## 5. 결과물
+
+* bebop
+  - bebop_driver
+  - bebop_teleop_node
+  - point_cloud_io pkg
+  : 발행한 topic에 대한 설명
+  
+* navigation
+  - bebop_path_planning  
+  - rosque_navi
+
 * urdf를 작성하여 드론 모델링
 ```
   <link name="landing_gear">

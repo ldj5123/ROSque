@@ -41,7 +41,7 @@ Navigation
   ...
 ```
   * moveit_setup_assistant로 bebop_path_planning 패키지 생성
-<img src="/image/drone_model.png" width="60%" height="60%"></img>
+<img src="/image/drone_model.png" width="90%" height="90%"></img>
   - moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
 <img src="/image/rivz.gif" width="60%" height="60%"></img>
 

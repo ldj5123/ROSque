@@ -18,7 +18,7 @@ SLAM
 ## 4. 결과물
 영상, 이미지
 
-## 5. 개발시 발생한 장애요인 및 해결사항
+## 5. 장애요인 및 해결사항
 1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 depth camera를 활용
     * depth camera를 활용할 MCU로 Raspberry pi 3를 선택
 

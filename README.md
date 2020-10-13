@@ -3,14 +3,14 @@ Navigation
 ## 1. 목적
 * 드론이 SLAM으로 작성힌 맵 기반의 장애물을 회피하며 자율비행
 ## 2. 주요 기능
-* 3D맵을 구성하여 drone이 navigation을 수행
+* 3D맵을 구성하여 드론이 Navigation을 수행
 
 ## 3. 개발환경
 * 소프트웨어
   - Linux ubuntu 16.04
   - ROS kinetic
 * 하드웨어
-  - parrot bebop 2 drone
+  - Parrot bebop 2 drone
 
 ## 4. 결과물
 

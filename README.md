@@ -41,9 +41,9 @@ Navigation
   ...
 ```
   * moveit_setup_assistant로 bebop_path_planning 패키지 생성
-<img src="/image/drone_model.png" width="90%" height="90%"></img>
+<img src="/image/drone_model.png" width="95%" height="95%"></img>
   - moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
-<img src="/image/rivz.gif" width="60%" height="60%"></img>
+<img src="/image/rivz.gif" width="95%" height="95%"></img>
 
 * moveit 상에서 point cloud subscribe
   - octomap-server로 point cloud를 발행했으나, 드론이 맵을 장애물로 인식하지 않고 통과
@@ -55,12 +55,11 @@ sensors:
       max_range: 40.0
       point_subsample: 10
       padding_offset: 0.1
-      padding_scale: 1.0
+      padding_scale: 1.04. 결과물
       filtered_cloud_topic: filtered_cloud
 ```
   - point_cloud_io 패키지를 이용해 point_cloud_topic에서 설정한 토픽명으로 point cloud 발행
-
-<img src="/image/moveit_map.png" width="60%" height="60%"></img>
+<img src="/image/moveit_map.png" width="95%" height="95%"></img>
  
 * path_planning을 통한 Navigation 구현
   - bebop_path_planning에서 plan했을 때 move_group/display_planned_path로 point 좌표값을 발행하는 것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발

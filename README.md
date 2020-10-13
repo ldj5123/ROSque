@@ -40,7 +40,7 @@ Navigation
   </link>
   ...
 ```
-  * moveit_setup_assistant로 bebop_path_planning 패키지 생성
+  - moveit_setup_assistant로 bebop_path_planning 패키지 생성
   
 <img src="/image/drone_model.png" width="95%" height="95%"></img>
 
@@ -48,7 +48,7 @@ Navigation
   
 <img src="/image/rivz.gif" width="95%" height="95%"></img>
 
-* moveit 상에서 point cloud subscribe
+2. moveit 상에서 point cloud subscribe
   - octomap-server로 point cloud를 발행했으나, 드론이 맵을 장애물로 인식하지 않고 통과
   - bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정
 ```
@@ -64,8 +64,10 @@ sensors:
   - point_cloud_io 패키지를 이용해 point_cloud_topic에서 설정한 토픽명으로 point cloud 발행
   
 <img src="/image/moveit_map.png" width="95%" height="95%"></img>
+  
+  - SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
  
-* path_planning을 통한 Navigation 구현
+3. path_planning을 통한 Navigation 구현
   - bebop_path_planning에서 plan했을 때 move_group/display_planned_path로 point 좌표값을 발행하는 것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
   
 <img src="/image/plan.gif" width="95%" height="95%"></img>
@@ -91,8 +93,8 @@ sensors:
         path_w.push_back(Quaternion2Yaw(qz, qw));
     }
 ```
-- 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
-* SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
+  - 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
+
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져, rviz상에서 실제 드론의 정확한 위치추정 불가
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
 

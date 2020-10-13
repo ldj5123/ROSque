@@ -11,9 +11,9 @@ SLAM
   - Linux ubuntu 16.04
   - ROS kinetic
 * 하드웨어
-  - parrot bebop 2 drone
+  - Parrot bebop 2 drone
   - Intel® RealSense™ Depth Camera D435
-  - raspberry pi 4
+  - Raspberry pi 4
 
 ## 4. 장애요인 및 해결사항
 1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 depth camera를 활용

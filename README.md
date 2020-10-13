@@ -20,16 +20,8 @@ Navigation
 
 ## 5. 결과물
 
-* bebop
-  - bebop_driver
-  - bebop_teleop_node
-  - point_cloud_io pkg
-  : 발행한 topic에 대한 설명
-  
-* navigation
-  - bebop_path_planning  
-  - rosque_navi
-
+* movit이라는 매니퓰레이터 모션플래닝하는 패키지를 이용
+* bebop에 맞도록 urdf를 작성하여 movit_setup_assistant로 bebop_path_planning 패키지를 생성
 * urdf를 작성하여 드론 모델링
 ```
   <link name="landing_gear">
@@ -62,4 +54,22 @@ Navigation
 
 * point_cloud_io로 SLAM한 맵의 point cloud를 발행한 화면
 ![moveit_map](https://user-images.githubusercontent.com/67685757/95727014-977b0300-0cb4-11eb-9f18-721df8b9a441.png)
+
+
+
+* octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
+* bebop_path_planning 패키지의 config에 sensor관련 yaml파일의 point cloud topic을 수정
+```
+sensors:
+    - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+      point_cloud_topic: /my_topic
+      max_range: 40.0
+      point_subsample: 10
+      padding_offset: 0.1
+      padding_scale: 1.0
+      filtered_cloud_topic: filtered_cloud
+```
+* point_cloud_io 패키지를 이용해 point_cloud_topic에서 설정한 토픽명으로 point cloud 발행
+  
+* bebop_path_plannig에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고 각 point로 이동하는 알고리즘 개발
 

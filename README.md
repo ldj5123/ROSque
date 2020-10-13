@@ -12,17 +12,17 @@ SLAM
   - ROS kinetic
 * 하드웨어
   - Parrot bebop 2 drone
-  - Intel® RealSense™ Depth Camera D435
+  - Intel® RealSense™ Depth Camera D435 
   - Raspberry pi 4
 
 ## 4. 장애요인 및 해결사항
-1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 depth camera를 활용
-    * depth camera를 활용할 MCU로 Raspberry pi 3를 선택
+1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 Depth camera를 활용
+    * Depth camera를 활용할 MCU로 Raspberry pi 3를 선택
 
 2. D435를 사용하려면 USB 3.0이 필요하지만 Raspberry pi 3는 USB 2.0만 지원
     * pi 3로 진행하니 성능이 떨어져 영상전송 지연율 증가 (약 30,000ms)
     * MCU를 Lattepanda로 변경 진행 -> 성능은 좋지만 발열과 전원공급에 문제가 생김
-    * MCU를 raspberry pi 4로 변경 진행 -> 10fps 확보
+    * MCU를 Raspberry pi 4로 변경 진행 -> 10fps 확보
     * pi 4 사용시 영상수신 가능하지만 point cloud2를 subscribe하는데 network 성능이 낮아 jetson이나 odroid 보드를 사용하면 개선될 것으로 보임
 
 3. pi 4의 외부전원으로 Lipo 배터리를 사용했는데 중량이 커져 드론의 비행시간이 줄어들고 pi 4를 드론의 위에 부착하다보니 무게중심이 높아져 비행안정성이 떨어짐

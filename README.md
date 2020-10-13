@@ -85,7 +85,7 @@ sensors:
         path_w.push_back(Quaternion2Yaw(qz, qw));
     }
 ```
-* 현재와 다음좌표를 이용해 bebop을 이동
+* 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
 ## 5. 장애요인 및 해결사항
 * SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가

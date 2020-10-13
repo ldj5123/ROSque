@@ -41,8 +41,11 @@ Navigation
   ...
 ```
   * moveit_setup_assistant로 bebop_path_planning 패키지 생성
+  
 <img src="/image/drone_model.png" width="95%" height="95%"></img>
+
   - moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
+  
 <img src="/image/rivz.gif" width="95%" height="95%"></img>
 
 * moveit 상에서 point cloud subscribe
@@ -59,6 +62,7 @@ sensors:
       filtered_cloud_topic: filtered_cloud
 ```
   - point_cloud_io 패키지를 이용해 point_cloud_topic에서 설정한 토픽명으로 point cloud 발행
+  
 <img src="/image/moveit_map.png" width="95%" height="95%"></img>
  
 * path_planning을 통한 Navigation 구현
@@ -86,8 +90,10 @@ sensors:
     }
 ```
 - 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
-- 
-## 5. 결과물
 * SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져, rviz상에서 실제 드론의 정확한 위치추정 불가
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
+
+## 5. 결과물
+- 영상
+

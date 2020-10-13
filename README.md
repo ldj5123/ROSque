@@ -12,8 +12,6 @@ Navigation
 * 하드웨어
   - parrot bebop 2 drone
 
-
-
 ## 4. 결과물
 
 * movit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
@@ -65,7 +63,29 @@ sensors:
 <img src="/image/moveit_map.png" width="48%" height="48%"></img>
   
 * bebop_path_plannig에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
-
+```
+          translation: 
+            x: 0.393470570714
+            y: -0.351707545828
+            z: 0.0
+          rotation: 
+            x: 0.0
+            y: 0.0
+            z: -7.72150347209e-06
+            w: 0.99999999997
+```
+* vector를 이용해 각 좌표를 담음
+```
+    for (i = 0; i < point_size; i++) {
+        path_x.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.x);
+        path_y.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.y);
+        path_z.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.z);
+        qz = msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].rotation.z;
+        qw = msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].rotation.w;
+        path_w.push_back(Quaternion2Yaw(qz, qw));
+    }
+```
+* 현재와 다음좌표를 이용해 bebop을 이동
 ## 5. 장애요인 및 해결사항
 * SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가

@@ -12,13 +12,9 @@ Navigation
 * 하드웨어
   - parrot bebop 2 drone
 
-## 4. 장애요인 및 해결사항
-* SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
-* D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가
-* rviz상에서 실제 드론의 위치추정 불가
-* 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
 
-## 5. 결과물
+
+## 4. 결과물
 
 * movit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
 * bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성하여 movit_setup_assistant로 bebop_path_planning 패키지를 생성
@@ -67,3 +63,9 @@ sensors:
 <img src="/image/moveit_map.png" width="48%" height="48%"></img>
   
 * bebop_path_plannig에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
+
+## 5. 장애요인 및 해결사항
+* SLAM으로 생성한 파일의 크기가 너무 클 경우 rviz에서 point cloud Subscribe와 path planning 실행 지연 또는 불가 
+* D435는 고사양을 요구해 Localization 시 지연 시간이 길어져 사용불가
+* rviz상에서 실제 드론의 위치추정 불가
+* 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움

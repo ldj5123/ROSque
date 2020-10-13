@@ -16,7 +16,7 @@ SLAM
   - Raspberry pi 4
 
 ## 4. 장애요인 및 해결사항
-### 4-1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 Depth camera를 활용
+#### 4-1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 Depth camera를 활용
   * Depth camera를 활용할 MCU로 Raspberry pi 3를 선택
 
 ### 4-2. D435를 사용하려면 USB 3.0이 필요하지만 Raspberry pi 3는 USB 2.0만 지원

@@ -14,7 +14,7 @@ Navigation
 
 ## 4.장애요인 및 해결사항
 
-### 4-1. moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
+#### 4-1. moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
   - bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성 후, moveit_setup_assistant로 bebop_path_planning 패키지를 생성
   ```
   <link name="landing_gear">
@@ -48,7 +48,7 @@ Navigation
   
 <img src="/image/rivz.gif" width="95%" height="95%"></img>
 
-### 4-2. moveit 상에서 point cloud subscribe
+#### 4-2. moveit 상에서 point cloud subscribe
   - octomap-server로 point cloud를 발행했으나, 드론이 맵을 장애물로 인식하지 않고 통과
   - bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정
 ```
@@ -67,7 +67,7 @@ sensors:
   
   - SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
  
-### 4-3. path_planning을 통한 Navigation 구현
+#### 4-3. path_planning을 통한 Navigation 구현
   - bebop_path_planning에서 plan했을 때 move_group/display_planned_path로 point 좌표값을 발행하는 것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
   
 <img src="/image/plan.gif" width="95%" height="95%"></img>

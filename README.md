@@ -47,7 +47,7 @@ Navigation
 <img src="/image/rivz.gif" width="60%" height="60%"></img>
 
 * moveit 상에서 point cloud subscribe
-  - octomap-server로 point cloud를 발행했으나, 드론이 맵을 장애물로 인식하지 않고 통과함
+  - octomap-server로 point cloud를 발행했으나, 드론이 맵을 장애물로 인식하지 않고 통과
   - bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정
 ```
 sensors:
@@ -64,7 +64,7 @@ sensors:
 <img src="/image/moveit_map.png" width="60%" height="60%"></img>
  
 * path_planning을 통한 Navigation 구현
-  - bebop_path_planning에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
+  - bebop_path_planning에서 plan했을 때 move_group/display_planned_path로 point 좌표값을 발행하는 것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발
 ```
           translation: 
             x: 0.393470570714

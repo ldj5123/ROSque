@@ -12,10 +12,10 @@ Navigation
 * 하드웨어
   - Parrot bebop 2 drone
 
-## 4. 결과물
+## 4.장애요인 및 해결사항
 
-* moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
-  - bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성 후, moveit_setup_assistant로 bebop_path_planning 패키지를 생성
+1. moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
+  * bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성 후, moveit_setup_assistant로 bebop_path_planning 패키지를 생성
 ```
   <link name="landing_gear">
     <visual>
@@ -40,7 +40,7 @@ Navigation
   </link>
   ...
 ```
-  - moveit_setup_assistant로 bebop_path_planning 패키지 생성
+  * moveit_setup_assistant로 bebop_path_planning 패키지 생성
 <img src="/image/drone_model.png" width="60%" height="60%"></img>
   - moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
 <img src="/image/rivz.gif" width="60%" height="60%"></img>
@@ -88,7 +88,7 @@ sensors:
 ```
 - 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
 - 
-## 5. 장애요인 및 해결사항
+## 5. 결과물
 * SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
 * D435는 고사양을 요구해 Localization 시 지연 시간이 길어져, rviz상에서 실제 드론의 정확한 위치추정 불가
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움

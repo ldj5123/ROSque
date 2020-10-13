@@ -47,7 +47,7 @@ Navigation
 <img src="/image/moveit.png" width="48%" height="48%"></img>
 
 * octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
-* bebop_path_planning 패키지의 config에 sensor관련 yaml파일의 point cloud topic을 수정
+* bebop_path_planning 패키지의 config에 [sensors_3d](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/sensors_3d.yaml) point cloud topic을 수정
 ```
 sensors:
     - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater

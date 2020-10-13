@@ -20,9 +20,8 @@ Navigation
 
 ## 5. 결과물
 
-* movit이라는 매니퓰레이터 모션플래닝하는 패키지를 이용
-* bebop에 맞도록 urdf를 작성하여 movit_setup_assistant로 bebop_path_planning 패키지를 생성
-* urdf를 작성하여 드론 모델링
+* movit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
+* bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성하여 movit_setup_assistant로 bebop_path_planning 패키지를 생성
 ```
   <link name="landing_gear">
     <visual>
@@ -51,12 +50,6 @@ Navigation
 
 * moveit setup assistant로 생성한 bebop_path_planning demo.launch 실행화면
 ![moveit](https://user-images.githubusercontent.com/67685757/95725480-acef2d80-0cb2-11eb-9f44-b608c25d3187.png)
-
-* point_cloud_io로 SLAM한 맵의 point cloud를 발행한 화면
-![moveit_map](https://user-images.githubusercontent.com/67685757/95727014-977b0300-0cb4-11eb-9f18-721df8b9a441.png)
-
-
-
 * octomap-server로 point cloud를 발행했으나 드론이 맵을 장애물로 인식하지 않고 통과함
 * bebop_path_planning 패키지의 config에 sensor관련 yaml파일의 point cloud topic을 수정
 ```
@@ -70,6 +63,7 @@ sensors:
       filtered_cloud_topic: filtered_cloud
 ```
 * point_cloud_io 패키지를 이용해 point_cloud_topic에서 설정한 토픽명으로 point cloud 발행
-  
-* bebop_path_plannig에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고 각 point로 이동하는 알고리즘 개발
 
+![moveit_map](https://user-images.githubusercontent.com/67685757/95727014-977b0300-0cb4-11eb-9f18-721df8b9a441.png)
+  
+* bebop_path_plannig에서 plan했을때 move_group/display_planned_path로 point 좌표값을 발행하는것을 확인하고 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발

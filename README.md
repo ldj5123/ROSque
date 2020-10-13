@@ -74,7 +74,7 @@ sensors:
             z: -7.72150347209e-06
             w: 0.99999999997
 ```
-* vector를 이용해 각 좌표를 담음
+* vector를 이용해 각 좌표를 변수에 담음
 ```
     for (i = 0; i < point_size; i++) {
         path_x.push_back(msg.trajectory[0].multi_dof_joint_trajectory.points[i].transforms[0].translation.x);

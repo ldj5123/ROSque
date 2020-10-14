@@ -35,7 +35,7 @@ Active tracking
   ```
    
 #### 4-4. remap 함수를 이용한 범위 변환
-  * Bounding Box의 위치와 크기에 따른 속도를 제어
+  * Bounding Box의 위치와 크기에 따른 속도 제어
   * diagonal_distance1 (150 ~ 320) ->  linear_x (0.2 ~ 0)
   * frame_x (0 ~ 856) ->  angluar_z (-0.3 ~ 0.3)
   * frame_y (480 ~ 0) ->  linear_z (-0.3 ~ 0.3)

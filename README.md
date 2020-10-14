@@ -63,7 +63,9 @@ Active tracking
   ```
 
 ## 5. 결과물
-active_tracking.bash
+```
+./rosque_active_tracking.sh
+```
 
 영상, 이미지
 

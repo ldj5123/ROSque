@@ -21,8 +21,8 @@ Active tracking
   * Find_Object_2D는 실시간 Target Object 지정가능하나, 물체 회전 시 특이점이 변경되어 인식 불가 
   
 #### 4-2. Bebop2의 Monocular Camera와 dnn_detect로 변경
-  * 4M 이상 거리의 물체 인식 불가 -> confidence 값을 0.5 이하로 낮추면 인식률은 높아지나, Labeling 정확도가 낮아짐
-  * Target object 둘 이상일 경우 -> dnn_detect의 Labeling은 Tracking 우선순위 설정불가
+  * 4M 이상 거리의 물체 인식 불가 -> confidence 값을 0.5 이하로 낮추면 인식률 향상, Labeling 정확도 하락
+  * Target object 둘 이상일 경우 -> dnn_detect의 Labeling은 Tracking 우선순위 설정 불가
   
 #### 4-3. Bounding box의 대각거리로 일정거리 유지 (수정, 코드 입력) 
   * 같은 거리에서도 물체의 크기에 따라 Bounding box 크기가 달라지면 동일한 거리유지 불가

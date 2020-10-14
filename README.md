@@ -16,7 +16,7 @@ Active tracking
 
 ## 4. 장애요인 및 해결사항
 
-#### 4-1. 드론에 Realsense2 D435(Detph Camera)와 Raspberri pi 4를 부착 후, find_Object_2D 사용
+#### 4-1. 드론에 Realsense2 D435(Detph Camera)와 Raspberri pi 4를 부착, find_Object_2D 사용
   * Depth Camera는 image frame (fps) 수신이 매우 느려 사용 불가, 데이터 처리 위한 고사양의 컴퓨팅 환경 요구
   * Find_Object_2D는 실시간 Target Object 지정 가능하나, 물체가 회전할 시 특이점이 변경되어 학습된 물체 인식 못함
   

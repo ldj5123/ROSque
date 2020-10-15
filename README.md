@@ -65,7 +65,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
     <param name="image_transport" value="$(arg transport)"/>
     <param name="publish_images" value="true" />
     <param name="data_dir" value="$(find dnn_detect)/model"/>
-	<param name="min_confidence" value="0.5"/>
+    <param name="min_confidence" value="0.5"/>
 
     <remap from="/camera/compressed" to="$(arg image)/$(arg transport)"/>
     <remap from="/camera_info" to="$(arg camera)/camera_info"/>

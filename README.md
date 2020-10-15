@@ -21,7 +21,7 @@ SLAM
   - Raspberry pi 4
 
 ## 4. 설치 및 실행
-#### 4-1.  git clone 하여 bebop_autonomy와 ROSque 설치
+#### 4-1.  설치
 ```
 $ cd catkin_ws
 

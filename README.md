@@ -51,7 +51,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * 4M 이상 거리의 물체 인식 불가 -> confidence 값을 0.5 이하로 낮추면 인식률 향상, Labeling 정확도 하락
   * Target object 둘 이상일 경우 -> dnn_detect의 Labeling은 Tracking 우선순위 설정 불가
   
-#### 5-3. dnn_detect launch 추가
+#### 5-3. dnn_detect bebop용 launch 추가
 ```
 <!-- Run the dnn_detect node -->
 <launch>
@@ -111,7 +111,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
     ROS_INFO("angular_z : %f", move_msg.angular.z);
 }
   ```
-#### 5-6. dnn_detect의 
+#### 5-6. dnn_detect의 한계
   * 여러물체를 한 다른 물체로 인식 커다란 물체로 인식하여 회피기동하는 문제 생김 (계단을 보트로, 의자를 소파로, 단상을 다이닝테이블로 인식하는경우 등등)
   * 전방에 대해 인식하는 물체만 회피 가능
 

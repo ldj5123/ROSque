@@ -72,7 +72,8 @@ $ roslaunch realsense2_camera rs_camera.launch
 ## 6. 결과물
 * 강당 SLAM
 
-<img src="/image/SLAM_sample.gif" width="48%" height="48%"></img>
+<img src="/image/SLAM_sample.gif" width="95%" height="95%"></img>
+
 <img src="/image/SLAM.png" width="48%" height="48%"></img>
 <img src="/image/SLAM2.png" width="48%" height="48%"></img>
 <img src="/image/SLAM_hall_full.png" width="48%" height="48%"></img>

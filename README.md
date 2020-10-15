@@ -110,7 +110,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
     ROS_INFO("angular_z : %f", move_msg.angular.z);
 }
   ```
-#### 5-6. 
+#### 5-6. dnn_detect의 
   * 여러물체를 한 다른 물체로 인식 커다란 물체로 인식하여 회피기동하는 문제 생김 (계단을 보트로, 의자를 소파로, 단상을 다이닝테이블로 인식하는경우 등등)
   * 전방에 대해 인식하는 물체만 회피 가능
 

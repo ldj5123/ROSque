@@ -16,7 +16,7 @@ SLAM
   - Raspberry pi 4
 
 ## 4. 설치 및 실행
-#### 4.1.  git clone
+#### 4-1.  git clone
 ```
 $ cd catkin_ws
 
@@ -25,9 +25,9 @@ $ git clone -b SLAM --single-branch https://github.com/ldj5123/ROSque.git
 $ catkin_make
 ```
 
-#### 4.2. realsense2_camera 패키지를 pi에 설치
+#### 4-2. realsense2_camera 패키지를 pi에 설치
 
-#### 4.3. 실행
+#### 4-3. 실행
 
 ```
 $ roscore

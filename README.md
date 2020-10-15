@@ -39,19 +39,19 @@ $ catkin_make
 ```
 $ roscore
 ```
-rtabmap 실행
+* rtabmap 실행
 ```
 $ roslaunch rtabmap_ros d435_rtabmap.launch
 ```
-bebop autonomy 실행
+* bebop autonomy 실행
 ```
 $ roslaunch bebop_driver bebop_node.launch
 ```
-bebop 원격 조종 노드 실행
+* bebop 원격 조종 노드 실행
 ```
 $ rosrun bebop_teleop bebop_teleop_node 
 ```
-pi에서 실행 (노트북에 카메라를 연결하여 SLAM 가능)
+* pi에서 실행 (노트북에 카메라를 연결하여 SLAM 가능)
 ```
 $ roslaunch realsense2_camera rs_camera.launch 
 ```

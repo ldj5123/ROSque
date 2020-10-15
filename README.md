@@ -81,7 +81,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 
             ROS_INFO("obstacle");
             ROS_INFO("linear_x: -0.2");
-	    ...
+	    	...
   ```
    
 #### 5-5. remap 함수를 이용한 범위 변환

@@ -77,10 +77,11 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * 같은 거리에서도 물체의 크기에 따라 Bounding box 크기가 달라지면 동일한 거리유지 불가
   * Bounding box가 대각거리보다 클 때, 먼거리의 물체도 회피 기동 -> 물체의 confidence가 0.75 이상일 경우만 장애물로 인식하게 함
   ```
-   if (diagonal_distance2 > 400 && object_center_y1 < 350 && object.confidence >= 0.75)
+   if (diagonal_distance2 > 400 && object_center_y1 < 350 && object.confidence >= 0.75) {
 
             ROS_INFO("obstacle");
             ROS_INFO("linear_x: -0.2");
+	    ...
   ```
    
 #### 5-5. remap 함수를 이용한 범위 변환

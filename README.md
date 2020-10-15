@@ -44,7 +44,7 @@ bebop 원격 조종 노드 실행
 ```
 $ rosrun bebop_teleop bebop_teleop_node 
 ```
-pi에서 (노트북에 카메라를 연결하여 SLAM 가능)
+pi에서 실행 (노트북에 카메라를 연결하여 SLAM 가능)
 ```
 $ roslaunch realsense2_camera rs_camera.launch 
 ```

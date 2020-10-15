@@ -33,5 +33,10 @@ SLAM
 
 #### 4-4. RGB-D 카메라는 고사양을 요구해 MCU의 사양에 따라 mapping 속도가 달라질 수 있을 것으로 보임
 
+#### 4-5. 빛반사에 의해 센서가 거리를 오인식해 point cloud 생성
+
 ## 5. 결과물
-영상, 이미지
+* 강당 SLAM
+<img src="/image/SLAM.png" width="95%" height="95%"></img>
+<img src="/image/SLAM2.png" width="95%" height="95%"></img>
+

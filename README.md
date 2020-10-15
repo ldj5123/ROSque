@@ -11,7 +11,7 @@ Active tracking
 * 입력한 object 외의 object 중 bounding box의 크기가 크면 회피기동
 * 입력한 object의 bounding box의 위치와 사이즈로 일정거리 유지하며 추적
 
-<img src="/image/Navigation_chart.png" width="95%" height="95%"></img>
+<img src="/image/active_tracking_chart.png" width="95%" height="95%"></img>
 
 ## 3. 개발환경
 * 소프트웨어

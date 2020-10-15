@@ -73,7 +73,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 </launch>
 ```
   
-#### 5-4. Bounding box의 대각거리로 일정거리 유지 (수정, 코드 입력) 
+#### 5-4. Bounding box의 대각거리로 일정거리 유지
   * 같은 거리에서도 물체의 크기에 따라 Bounding box 크기가 달라지면 동일한 거리유지 불가
   * Bounding box가 대각거리보다 클 때, 먼거리의 물체도 회피 기동 -> 물체의 confidence가 0.75 이상일 경우만 장애물로 인식하게 함
   ```

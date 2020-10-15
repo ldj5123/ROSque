@@ -1,0 +1,18 @@
+<!-- Run the dnn_detect node -->
+<launch>
+  <!-- namespace for camera input -->
+  <arg name="camera" default="/"/>
+  <arg name="image" default="/bebop/image_raw"/>
+  <arg name="transport" default="compressed"/>
+
+  <node pkg="dnn_detect" name="dnn_detect"
+    type="dnn_detect" respawn="false">
+    <param name="image_transport" value="$(arg transport)"/>
+    <param name="publish_images" value="true" />
+    <param name="data_dir" value="$(find dnn_detect)/model"/>
+	<param name="min_confidence" value="0.5"/>
+
+    <remap from="/camera/compressed" to="$(arg image)/$(arg transport)"/>
+    <remap from="/camera_info" to="$(arg camera)/camera_info"/>
+  </node>
+</launch>

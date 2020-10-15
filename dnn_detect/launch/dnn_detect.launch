@@ -1,0 +1,15 @@
+<!-- Run the dnn_detect node -->
+<launch>
+  <!-- namespace for camera input -->
+  <arg name="camera" default="/camera"/>
+  <arg name="image" default="image"/>
+  <arg name="transport" default="compressed"/>
+
+  <node pkg="dnn_detect" name="dnn_detect"
+    type="dnn_detect" output="screen" respawn="false">
+    <param name="image_transport" value="$(arg transport)"/>
+    <param name="publish_images" value="true" />
+    <param name="data_dir" value="$(find dnn_detect)/model"/>
+ 
+  </node>
+</launch>

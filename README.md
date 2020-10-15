@@ -11,7 +11,7 @@ Active tracking
 * 입력한 object 외의 object 중 bounding box의 크기가 크면 회피기동
 * 입력한 object의 bounding box의 위치와 사이즈로 일정거리 유지하며 추적
 
-<img src="/image/active_tracking_chart.png" width="95%" height="95%"></img>
+<img src="/image/acrive_tracking_chart.png" width="95%" height="95%"></img>
 
 ## 3. 개발환경
 * 소프트웨어
@@ -21,9 +21,27 @@ Active tracking
   - Parrot bebop 2 drone
   
 ## 4. 설치 및 실행
+#### 4-1. bebop_autonomy와 ROSque 설치
+```
+$ cd catkin_ws
+
+$ git clone https://github.com/AutonomyLab/bebop_autonomy.git
+
+$ git clone -b Active_tracking --single-branch https://github.com/ldj5123/ROSque.git
+
+$ catkin_make
+```
+
+### 4-2. 실행
+```
+$ roscore
+```
+```
+$ roslaunch roslaunch active_tracking active_tracking.launch
+```
 
 
-## 5. 장애요인 및 해결사항
+## 5. 프로젝트 수행 경과 및 개선 사항
 
 #### 5-1. 드론에 Realsense2 D435(Detph Camera)와 Raspberri pi 4를 부착 후, find_Object_2D 사용
   * Depth Camera는 image frame (fps) 수신이 느림 -> 데이처 처리 위한 고사양의 컴퓨팅 환경 요구

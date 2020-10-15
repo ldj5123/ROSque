@@ -1,0 +1,14 @@
+<!-- Run the rqt_image_view, bebop_node, dnn_detect_bebop, calculate_distance_cpp, bebop_teleop  20.10.07-->
+
+<launch>
+	<group>
+		<node name="image_view_debug" pkg="rqt_image_view" type="rqt_image_view" args="/dnn_images"/>
+		<include file="$(find bebop_driver)/launch/bebop_node.launch"/>
+		<include file="$(find dnn_detect)/launch/dnn_detect_bebop.launch"/>
+		<node name="active_tracking" pkg="active_tracking" type="active_tracking" output="screen"/>
+		<node name="bebop_teleop_node" pkg="bebop_teleop" type="bebop_teleop_node"/>
+
+	</group>
+</launch>
+
+ 	

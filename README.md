@@ -29,7 +29,7 @@ SLAM
   * 드론의 배터리에서 전원공급을 받는다면 비행시간과 비행안정성을 개선할 수 있음
 
     <img src="/image/ROSque_battery.png" width="48%" height="48%"></img>
-    <img src="/image/ROSque_bebop2.png" width="48%" height="55%"></img>
+    <img src="/image/ROSque_bebop2.png" width="48%" height="48%"></img>
 
 #### 4-4. RGB-D 카메라는 고사양을 요구해 MCU의 사양에 따라 mapping 속도가 달라질 수 있을 것으로 보임
 
@@ -37,6 +37,8 @@ SLAM
 
 ## 5. 결과물
 * 강당 SLAM
-<img src="/image/SLAM.png" width="95%" height="95%"></img>
-<img src="/image/SLAM2.png" width="95%" height="95%"></img>
+<img src="/image/SLAM.png" width="48%" height="48%"></img>
+<img src="/image/SLAM2.png" width="48%" height="48%"></img>
+<img src="/image/SLAM_hall_full.png" width="48%" height="48%"></img>
+<img src="/image/SLAM_hall_full2.png" width="48%" height="48%"></img>
 

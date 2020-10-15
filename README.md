@@ -131,6 +131,26 @@ sensors:
     }
 ```
   - 경로의 현재좌표와 다음좌표의 차를 이용해 bebop을 이동
+```
+    // x, y, z : 현재좌표 x_n, y_n, z_n : 
+    std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
+    std::chrono::milliseconds mill = std::chrono::duration_cast<std::chrono::milliseconds>(start - start);
+    float z_ = z_n - z;
+    float y_ = y_n - y;
+    float x_ = x_n - x;
+    geometry_msgs::Twist cmdT;
+    while(mill.count() < millsec){
+        std::chrono::system_clock::time_point End = std::chrono::system_clock::now();
+        mill = std::chrono::duration_cast<std::chrono::milliseconds>(End - start);
+        cmdT;
+
+        cmdT.linear.x = x_/8;
+        cmdT.linear.y = y_/8;
+        cmdT.linear.z = 0;
+        cmdT.angular.x = cmdT.angular.y = cmdT.angular.z = 0;
+        bebop_cmd.publish(cmdT);
+    }
+```
   
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
 

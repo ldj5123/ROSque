@@ -4,7 +4,12 @@ SLAM
 * SLAM을 이용하여 드론으로 주변 환경에 대한 모델을 3D맵으로 생성, 사람이 접근하기 힘든 실내 공간을 인식할 수 있게 함
 
 ## 2. 주요 기능
-* 임의의 실내공간을 localization하며 mapping 함
+* D435가 장착된 raspberry pi 4를 통해 point cloud2를 Subscribe
+* bebop_teleop을 이용해 키보드로 조종하며 drone 이동
+* Subscribe한 정보를 rtabmap을 이용해 mapping
+* mapping 후 .ply파일로 저장
+
+<img src="/image/SLAM_chart.png" width="95%" height="95%"></img>
 
 ## 3. 개발환경
 * 소프트웨어

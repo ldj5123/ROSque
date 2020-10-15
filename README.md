@@ -6,7 +6,7 @@ Active tracking
 ## 2. 주요 기능
 * 드론의 단안 카메라 및 OpenCV dnn_detect를 이용한 물체 추적 
   - 목표 물체 탐색(Target searching), 거리 유지(Maintaining constant distance), 충돌 회피(Collision Avoidance)
-* drone으로부터 전송받은 이미지를 dnn_detect를 통해 object 인식
+* Drone으로부터 전송받은 이미지를 dnn_detect를 통해 object 인식
 * active_tracking에 추적할 object 입력
 * 입력한 object 외의 object 중 bounding box의 크기가 크면 회피 기동
 * 입력한 object의 bounding box의 위치와 사이즈로 일정거리 유지하며 추적
@@ -74,7 +74,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 ```
   
 #### 5-4. Bounding box의 대각거리로 일정거리 유지
-  * 같은 거리에서도 물체의 크기에 따라 Bounding box 크기가 달라지면 동일한 거리유지 불가
+  * 같은 거리에서도 물체의 크기에 따라, Bounding box 크기가 달라지면 동일한 거리유지 불가
   * Bounding box가 대각거리보다 클 때, 먼거리의 물체도 회피 기동 -> 물체의 confidence가 0.75 이상일 경우만 장애물로 인식하게 함
   ```
    if (diagonal_distance2 > 400 && object_center_y1 < 350 && object.confidence >= 0.75) {

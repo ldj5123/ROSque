@@ -76,7 +76,7 @@ sensors:
   
 <img src="/image/moveit_map.png" width="95%" height="95%"></img>
   
-  - SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 또는 불가 
+  - PC 성능에 낮을 경우 SLAM으로 생성한 ply파일의 크기가 너무 클 경우, rviz에서 point cloud Subscribe 및 path planning 실행 지연 
  
 #### 5-3. path_planning을 통한 Navigation 구현
   - bebop_path_planning에서 plan했을 때 move_group/display_planned_path로 point 좌표값을 발행하는 것을 확인하고, 각 point로 이동하는 [알고리즘](https://github.com/ldj5123/ROSque/blob/Navigation/rosque_navi/src/path.h "path.h") 개발

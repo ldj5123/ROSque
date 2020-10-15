@@ -12,7 +12,16 @@ Navigation
 * 하드웨어
   - Parrot bebop 2 drone
   
-## 4. 설치 및 
+## 4. 설치 및 실행
+
+#### 4-1. git clone
+```
+$ cd catkin_ws
+
+$ git clone -b Navigation --single-branch https://github.com/ldj5123/ROSque.git
+
+$ catkin_make
+```
 
 ## 5. 장애요인 및 해결사항
 
@@ -46,7 +55,7 @@ Navigation
   
 <img src="/image/drone_model.png" width="95%" height="95%"></img>
 
-  - moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
+- moveit_setup_assistant로 생성한 bebop_path_planning demo.launch 실행화면
   
 <img src="/image/rivz.gif" width="95%" height="95%"></img>
 

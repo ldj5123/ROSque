@@ -77,7 +77,7 @@ $ roslaunch realsense2_camera rs_camera.launch
 #### 5-5. 빛반사에 의해 센서가 거리를 오인식해 voxel 생성
 
 ## 6. 결과물
-* 강당 SLAM
+* SLAM 예시
 
 <img src="/image/SLAM_sample.gif" width="95%" height="95%"></img>
 

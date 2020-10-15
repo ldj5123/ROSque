@@ -1,6 +1,9 @@
 ROSque project
 ==============
 #
+## 프로젝트 개발동기
+* 사람이 들어가기 힘든 공간을 드론으로 3D맵을 만들며 확인하여, 드론으로 장애물을 회피하며 구조물품을 배달하고 특정 피사체를 추적할 수 있는 시스템 구축해 향후 재난상황에 활용 기대
+
 ## [SLAM](https://github.com/ldj5123/ROSque/tree/SLAM "Navigation")
     Raspberri pi4 및 Realsense d435, Bebop 2 drone을 이용한 map 생성
 ## [Navigation](https://github.com/ldj5123/ROSque/tree/Navigation "Navigation")

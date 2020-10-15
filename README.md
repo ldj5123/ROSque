@@ -78,4 +78,3 @@ $ roslaunch realsense2_camera rs_camera.launch
 <img src="/image/SLAM2.png" width="48%" height="48%"></img>
 <img src="/image/SLAM_hall_full.png" width="48%" height="48%"></img>
 <img src="/image/SLAM_hall_full2.png" width="48%" height="48%"></img>
-

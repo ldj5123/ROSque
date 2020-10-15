@@ -24,6 +24,8 @@ Navigation
 ```
 $ cd catkin_ws
 
+$ git clone https://github.com/AutonomyLab/bebop_autonomy.git
+
 $ git clone -b Navigation --single-branch https://github.com/ldj5123/ROSque.git
 
 $ catkin_make

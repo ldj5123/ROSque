@@ -20,7 +20,7 @@ Navigation
   
 ## 4. 설치 및 실행
 
-#### 4-1. git clone
+#### 4-1. 설치
 ```
 $ cd catkin_ws
 

@@ -56,7 +56,7 @@ pi에서 실행 (노트북에 카메라를 연결하여 SLAM 가능)
 $ roslaunch realsense2_camera rs_camera.launch 
 ```
 
-## 5. 장애요인 및 해결사항
+## 5. 프로젝트 수행 경과 및 개선 사항
 #### 5-1. Monocular SLAM으로 진행하려 했으나 특이점만 인식해 Mapping하다보니 정확도가 떨어져 Depth camera를 활용
   * Depth camera를 활용할 MCU로 Raspberry pi 3를 선택
 

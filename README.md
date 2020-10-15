@@ -28,8 +28,28 @@ $ git clone -b Navigation --single-branch https://github.com/ldj5123/ROSque.git
 
 $ catkin_make
 ```
+#### 4-2. 실행
+```
+$ roscore
+```
+```
+$ roslaunch bebop_driver bebop_node.launch
+```
+이동 경로를 생성하는 bebop moveit 실행
+```
+$ roslaunch bebop_path_planning demo.launch
+```
+경로대로 움직이는 알고리즘 노드 실행
+```
+$ rosrun rosque_navi rosque_navi
+```
+비상시 착륙할 수 있도록 조종 노드 실행
+```
+$ rosrun bebop_teleop bebop_teleop_node
+```
 
-## 5. 장애요인 및 해결사항
+
+## 5. 프로젝트 수행 경과 및 개선 사항
 
 #### 5-1. moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
   - bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성 후, moveit_setup_assistant로 bebop_path_planning 패키지를 생성

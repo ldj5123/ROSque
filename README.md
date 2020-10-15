@@ -8,7 +8,7 @@ Active tracking
   - 목표 물체 탐색(Target searching), 거리 유지(Maintaining constant distance), 충돌 회피(Collision Avoidance)
 * drone으로부터 전송받은 이미지를 dnn_detect를 통해 object 인식
 * active_tracking에 추적할 object 입력
-* 입력한 object 외의 object 중 bounding box의 크기가 크면 회피기동
+* 입력한 object 외의 object 중 bounding box의 크기가 크면 회피 기동
 * 입력한 object의 bounding box의 위치와 사이즈로 일정거리 유지하며 추적
 
 <img src="/image/acrive_tracking_chart.png" width="95%" height="95%"></img>
@@ -113,7 +113,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   ```
 #### 5-6. dnn_detect의 한계
   * 여러 물체를 한 다른 물체로 인식 커다란 물체로 인식하여 회피 기동하는 문제
-     - 계단을 보트로, 의자를 소파로, 단상을 다이닝테이블로 인식하는 경우 등
+     - ex. 계단을 보트로, 의자를 소파로, 단상을 다이닝테이블로 인식하는 경우 등
   * 전방에 대해 인식하는 물체만 회피 가능
 
 ## 6. 결과물

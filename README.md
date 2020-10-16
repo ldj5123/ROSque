@@ -11,5 +11,9 @@ ROSque project
 ## [Active Tracking](https://github.com/ldj5123/ROSque/tree/Active_tracking "Navigation")
     Bebop 2 drone 및 OpenCV dnn_detect를 이용해 특정 물체를 추적
 
+* 동영상 링크↓
+
+[![영상](http://img.youtube.com/vi/bBsFi7f2Tvk/0.jpg)](https://youtu.be/bBsFi7f2Tvk?t=0s)
+
 
 프로젝트 기간 : 2020.9.9 ~ 2020.10.13

@@ -13,7 +13,7 @@ ROSque project
 
 * 동영상 링크↓
 
-[![영상](http://img.youtube.com/vi/bBsFi7f2Tvk/0.jpg)](https://youtu.be/bBsFi7f2Tvk?t=0s)
+[![영상](http://img.youtube.com/vi/eTvGntwinM8/0.jpg)](https://www.youtube.com/watch?v=eTvGntwinM8?t=0s)
 
 
 프로젝트 기간 : 2020.9.9 ~ 2020.10.13

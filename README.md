@@ -158,5 +158,6 @@ sensors:
 
 ## 6. 결과물
 
+  * 동영상 
   [![영상](http://img.youtube.com/vi/qfNVPmGrgD4/0.jpg)](https://youtu.be/qfNVPmGrgD4?t=0s)
 

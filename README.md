@@ -157,5 +157,5 @@ sensors:
 * 생성된 3D맵과 실제 공간의 괴리에 따른 드론 제어의 어려움
 
 ## 6. 결과물
-{% include navigation.html qfNVPmGrgD4&feature="https://youtu.be/qfNVPmGrgD4" %}  
+  {% include navigation.html id="qfNVPmGrgD4&feature=youtu.be" %}  
 

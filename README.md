@@ -51,7 +51,9 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * 4M 이상 거리의 물체 인식 불가 -> confidence 값을 0.5 이하로 낮추면 인식률 향상, Labeling 정확도 하락
   * Target object 둘 이상일 경우 -> dnn_detect의 Labeling은 Tracking 우선순위 설정 불가
   
-#### 5-3. dnn_detect bebop용 launch 추가
+#### 5-3. drone 이미지 학습
+  
+#### 5-4. dnn_detect bebop용 launch 추가
 ```
 <!-- Run the dnn_detect node -->
 <launch>
@@ -73,7 +75,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 </launch>
 ```
   
-#### 5-4. Bounding box의 대각거리로 일정거리 유지
+#### 5-5. Bounding box의 대각거리로 일정거리 유지
   * 같은 거리에서도 물체의 크기에 따라, Bounding box 크기가 달라지면 동일한 거리유지 불가
   * Bounding box가 대각거리보다 클 때, 먼거리의 물체도 회피 기동 -> 물체의 confidence가 0.75 이상일 경우만 장애물로 인식하게 함
   ```
@@ -84,7 +86,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 	    		...
   ```
    
-#### 5-5. remap 함수를 이용한 범위 변환
+#### 5-6. remap 함수를 이용한 범위 변환
   * Bounding Box의 위치와 크기에 따른 속도 제어
   * diagonal_distance1 (150 ~ 320) ->  linear_x (0.2 ~ 0)
   * frame_x (0 ~ 856) ->  angluar_z (-0.3 ~ 0.3)
@@ -111,7 +113,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
     ROS_INFO("angular_z : %f", move_msg.angular.z);
 }
   ```
-#### 5-6. dnn_detect의 한계
+#### 5-7. dnn_detect의 한계
   * 여러 물체를 한 다른 물체로 인식 커다란 물체로 인식하여 회피 기동하는 문제
      - ex. 계단을 보트로, 의자를 소파로, 단상을 다이닝테이블로 인식하는 경우 등
   * 전방에 대해 인식하는 물체만 회피 가능

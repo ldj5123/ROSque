@@ -85,3 +85,8 @@ $ roslaunch realsense2_camera rs_camera.launch
 <img src="/image/SLAM2.png" width="48%" height="48%"></img>
 <img src="/image/SLAM_hall_full.png" width="48%" height="48%"></img>
 <img src="/image/SLAM_hall_full2.png" width="48%" height="48%"></img>
+
+* 동영상 링크 ↓
+
+[![영상](http://img.youtube.com/vi/pTL9qIh5eFE/0.jpg)](https://youtu.be/pTL9qIh5eFE?t=0s)
+

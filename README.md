@@ -3,7 +3,7 @@ Navigation
 ## 1. 목적
 * 드론이 SLAM으로 작성힌 맵 기반의 장애물을 회피하며 자율비행
 ## 2. 주요 기능
-* SLAM으로 저장한 .ply파일을 point_cloud_io 패키지를 이용해 point cloud2 발행
+* SLAM으로 저장한 .ply파일을 point_cloud_io 패키지를 이용해 point cloud2 topic 발행
 * point cloud2를 subscribe해 rivz상에서 octomap으로 구현
 * 목표지점을 지정, plan하면 장애물을 피하며 회피기동 경로 topic publish
 * 경로를 subscribe하여 좌표마다 이동하는 cmd_vel topic publish

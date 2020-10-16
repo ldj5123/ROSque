@@ -158,5 +158,5 @@ sensors:
 
 ## 6. 결과물
 
-  <iframe width="1920" height="920" src="https://www.youtube.com/embed/qfNVPmGrgD4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/qfNVPmGrgD4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -162,5 +162,5 @@ sensors:
 
   [![영상](http://img.youtube.com/vi/qfNVPmGrgD4/0.jpg)](https://youtu.be/qfNVPmGrgD4?t=0s)
   
-  <iframe width="1252" height="704" src="https://www.youtube.com/embed/qfNVPmGrgD4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/qfNVPmGrgD4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

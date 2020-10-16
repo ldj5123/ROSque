@@ -162,4 +162,3 @@ sensors:
 
   [![영상](http://img.youtube.com/vi/qfNVPmGrgD4/0.jpg)](https://youtu.be/qfNVPmGrgD4?t=0s)
   
-  [youtube link](https://www.youtube.com/embed/qfNVPmGrgD4)

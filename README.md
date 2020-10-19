@@ -117,10 +117,7 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * 여러 물체를 한 다른 물체로 인식 커다란 물체로 인식하여 회피 기동하는 문제
      - ex. 의자를 소파로, 계단이나 난간을 보트로, 나무를 비행기로, 단상을 다이닝테이블로 인식하는 경우 등
      
-     <img src="/image/labeling error_sofa.png" width="48%" height="58%"></img>
-     <img src="/image/labeling error_boat.png" width="48%" height="48%"></img>
-     <img src="/image/labeling error_aeroplane.png" width="48%" height="48%"></img>
-   
+     <img src="/image/labeling error_images.png" width="80%" height="80%"></img>
      
   * 전방에 대해 인식하는 물체만 회피 가능
 

@@ -55,7 +55,9 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * Target object가 둘 이상일 경우 dnn_detect의 Labeling으로 Tracking 우선순위 설정 불가
   
 #### 5-3. drone 이미지 학습
-  
+  * Parrot Bebop2 Drone과 Turtlebot3 이미지를 촬영하여 학습시킴
+  * 학습결과 물체가 너무 작아 1.8m 거리 내에서도 물체 인식이 불가, 추적할 object를 person으로 변경
+ 
 #### 5-4. dnn_detect bebop용 launch 추가
 ```
 <!-- Run the dnn_detect node -->

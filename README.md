@@ -5,7 +5,7 @@ Active tracking
 
 ## 2. 주요 기능
 * 드론의 단안 카메라 및 OpenCV dnn_detect를 이용한 물체 추적 
-  - 목표 물체 탐색(Target searching), 거리 유지(Maintaining constant distance), 충돌 회피(Collision Avoidance)
+	* 목표 물체 탐색(Target searching), 거리 유지(Maintaining constant distance), 충돌 회피(Collision Avoidance)
 * Drone으로부터 전송받은 이미지를 dnn_detect를 통해 object 인식
 * active_tracking에 추적할 object 입력
 * 입력한 object 외의 object 중 bounding box의 크기가 크면 회피 기동

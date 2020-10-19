@@ -54,7 +54,7 @@ $ rosrun bebop_teleop bebop_teleop_node
 ## 5. 프로젝트 수행 경과 및 개선 사항
 
 #### 5-1. moveit이라는 매니퓰레이터를 모션플래닝하는 패키지를 이용
-  - bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성 후, moveit_setup_assistant로 bebop_path_planning 패키지를 생성
+  - bebop에 맞도록 [urdf](https://github.com/ldj5123/ROSque/blob/Navigation/bebop_path_planning/config/bebop.urdf "urdf")를 작성
   ```
   <link name="landing_gear">
     <visual>

@@ -51,9 +51,8 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   
 #### 5-2. Bebop2의 Monocular Camera와 dnn_detect로 변경
   * 4M 이상 거리의 물체 인식 불가
-  	* confidence 값을 0.5 이하로 낮추면 인식률 향상, Labeling 정확도 하락
-  * Target object 둘 이상일 경우
-  	* dnn_detect의 Labeling은 Tracking 우선순위 설정 불가
+  	* Confidence 값을 0.5 이하로 낮추면 인식률 향상, Labeling 정확도 하락
+  * Target object가 둘 이상일 경우 dnn_detect의 Labeling으로 Tracking 우선순위 설정 불가
   
 #### 5-3. drone 이미지 학습
   

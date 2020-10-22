@@ -29,12 +29,12 @@ void Calculator::object_callback(const dnn_detect::DetectedObjectArray::ConstPtr
         dnn_detect::DetectedObject object;
         object = msg -> objects.at(i);
 
-        diagonal_distance2 = sqrt(pow(object.x_max - object.x_min, 2) + pow(object.y_max - object.y_min,2)); // object bounding box 대각거리 계산
+         = sqrt(pow(object.x_max - object.x_min, 2) + pow(object.y_max - object.y_min,2)); // object bounding box 대각거리 계산
 
         system("clear screen");
         this->object_center_x1 = (object.x_max - object.x_min)/2 + object.x_min;
         this->object_center_y1 = (object.y_max - object.y_min)/2 + object.y_min;
-        if (diagonal_distance2 > 400 && object_center_y1 < 350 && object.confidence >= 0.75) {
+        if (diagonal_distance > 400 && object_center_y1 < 350 && object.confidence >= 0.75) {
 
             ROS_INFO("obstacle");
             ROS_INFO("linear_x: -0.2");
@@ -46,15 +46,15 @@ void Calculator::object_callback(const dnn_detect::DetectedObjectArray::ConstPtr
 
             move_pub.publish(move_msg);
 
-            ROS_INFO("diagonal_distance 2 : %d", diagonal_distance2);
+            ROS_INFO("diagonal_distance : %d", diagonal_distance);
             ROS_INFO("%s, %f", object.class_name.c_str(), object.confidence);
         }else if(object.class_name == this->target_object) {
 
-            diagonal_distance1 = sqrt(pow(object.x_max - object.x_min, 2) + pow(object.y_max - object.y_min,2));
+            diagonal_distance = sqrt(pow(object.x_max - object.x_min, 2) + pow(object.y_max - object.y_min,2));
 
             ROS_INFO("object_center_x : %d", object_center_x1);
             ROS_INFO("object_center_y : %d", object_center_y1);
-            ROS_INFO("diagonal_distance : %d", diagonal_distance1);
+            ROS_INFO("diagonal_distance : %d", diagonal_distance);
             ROS_INFO("%s, %f", object.class_name.c_str(), object.confidence);
             calculate_distance();
         }

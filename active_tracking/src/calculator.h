@@ -18,8 +18,7 @@ class Calculator {
         int image_center_y;
         int object_center_x1;
         int object_center_y1;
-        int diagonal_distance1;
-        int diagonal_distance2;
+        int diagonal_distance;
 
         ros::Subscriber object_sub;
         ros::Publisher move_pub;

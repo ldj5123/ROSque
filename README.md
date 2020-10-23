@@ -132,6 +132,4 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
 ```
 ./rosque_active_tracking.sh
 ```
-
-영상, 이미지
-
+[![영상](http://img.youtube.com/vi/elWl-YK88so/0.jpg)](https://youtu.be/elWl-YK88so=0s)

@@ -129,9 +129,6 @@ $ roslaunch roslaunch active_tracking active_tracking.launch
   * 전방에 대해 인식하는 물체만 회피 가능
 
 ## 6. 결과물
-```
-./rosque_active_tracking.sh
-```
 
 * 동영상 링크 ↓
 
